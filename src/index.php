@@ -9,14 +9,14 @@ use \ReverseGeocode\SaveFile\Clients\ProjectS3Client;
 use \ReverseGeocode\SaveFile\Clients\ProjectSqsClient;
 use \ReverseGeocode\SaveFile\Configs\InitialConfigs;
 
-(new InitialConfigs())->config();
-
 function index($input): string
 {
-    $uploaderClient = new ProjectS3Client();
-    $notifierClient = new ProjectSqsClient();
-
     try {
+        (new InitialConfigs())->config();
+
+        $uploaderClient = new ProjectS3Client();
+        $notifierClient = new ProjectSqsClient();
+
         $fileKey = (new FileUploaderService($uploaderClient))
             ->upload($input['file']);
 
