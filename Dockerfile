@@ -63,7 +63,6 @@ WORKDIR /var/task
 
 COPY src/ ./src
 COPY composer.json .
-COPY .env .
 COPY src/index.php .
 
 RUN composer install
