@@ -2,7 +2,7 @@
 
 namespace ReverseGeocode\SaveFile\Configs;
 
-use \Symfony\Component\Dotenv\Dotenv;
+use Dotenv\Dotenv;
 
 class InitialConfigs
 {
@@ -13,7 +13,7 @@ class InitialConfigs
 
     private function configDotEnv(): void
     {
-        $dotenv = new Dotenv();
-        $dotenv->load(__DIR__.'/../../.env');
+        $dotenv = Dotenv::createImmutable(__DIR__.'/../../');
+        $dotenv->safeLoad();
     }
 }
