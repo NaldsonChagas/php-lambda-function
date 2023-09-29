@@ -16,7 +16,7 @@ class Response
         return json_encode([
             'statusCode' => $statusCode,
             'headers' => $headers,
-            'body' => $body
+            'body' => ['message' => $body]
         ]);
     }
 }
