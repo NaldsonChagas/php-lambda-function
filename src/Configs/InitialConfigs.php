@@ -1,6 +1,6 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Configs;
+namespace ReverseGeocode\SaveFile\Configs;
 
 use Dotenv\Dotenv;
 

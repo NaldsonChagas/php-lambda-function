@@ -1,8 +1,8 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Services;
+namespace ReverseGeocode\SaveFile\Services;
 
-use Naldson\LambdaSaveFile\Clients\UploaderClient;
+use ReverseGeocode\SaveFile\Clients\UploaderClient;
 
 readonly class FileUploaderService
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Clients;
+namespace ReverseGeocode\SaveFile\Clients;
 
 interface UploaderClient {
     function upload(string $file);

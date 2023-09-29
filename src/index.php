@@ -2,10 +2,10 @@
 
 require 'vendor/autoload.php';
 
-use \Naldson\LambdaSaveFile\Utils\Response;
-use \Naldson\LambdaSaveFile\Services\FileUploaderService;
-use \Naldson\LambdaSaveFile\Clients\ProjectS3Client;
-use \Naldson\LambdaSaveFile\Configs\InitialConfigs;
+use \ReverseGeocode\SaveFile\Utils\Response;
+use \ReverseGeocode\SaveFile\Services\FileUploaderService;
+use \ReverseGeocode\SaveFile\Clients\ProjectS3Client;
+use \ReverseGeocode\SaveFile\Configs\InitialConfigs;
 
 (new InitialConfigs())->config();
 

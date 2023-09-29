@@ -1,6 +1,6 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Exceptions;
+namespace ReverseGeocode\SaveFile\Exceptions;
 
 class UploadException extends \RuntimeException
 {

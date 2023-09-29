@@ -1,6 +1,6 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Utils;
+namespace ReverseGeocode\SaveFile\Utils;
 
 class Response
 {

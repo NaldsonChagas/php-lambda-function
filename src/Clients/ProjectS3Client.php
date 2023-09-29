@@ -1,10 +1,10 @@
 <?php
 
-namespace Naldson\LambdaSaveFile\Clients;
+namespace ReverseGeocode\SaveFile\Clients;
 
 use Aws\S3\ObjectUploader;
 use Aws\S3\S3Client;
-use Naldson\LambdaSaveFile\Exceptions\UploadException;
+use ReverseGeocode\SaveFile\Exceptions\UploadException;
 
 readonly class ProjectS3Client implements UploaderClient
 {

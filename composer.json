@@ -1,9 +1,9 @@
 {
-    "name": "naldson/lambda-save-file",
+    "name": "reverse-geocode/save-file",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Naldson\\LambdaSaveFile\\": "src/"
+            "ReverseGeocode\\SaveFile\\": "src/"
         }
     },
     "authors": [
