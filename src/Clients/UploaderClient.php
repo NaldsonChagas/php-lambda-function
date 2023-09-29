@@ -3,5 +3,5 @@
 namespace ReverseGeocode\SaveFile\Clients;
 
 interface UploaderClient {
-    function upload(string $file);
+    function upload(string $file): string;
 }

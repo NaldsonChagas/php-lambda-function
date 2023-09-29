@@ -1,7 +1,7 @@
 #Lambda base image Amazon linux
 FROM public.ecr.aws/lambda/provided as builder 
 # Set desired PHP Version
-ARG php_version="8.0.2"
+ARG php_version="8.2.10"
 RUN yum clean all && \
     yum install -y autoconf \
                 bison \
@@ -57,10 +57,16 @@ RUN chmod 0755 /var/runtime/bootstrap
 # Layer 3: Vendor
 COPY --from=builder /lambda-php-vendor/vendor /opt/vendor
 
-# You chose your lambda function
-# to copy inside the container
-COPY src/ /var/task/
+RUN yum install -y git
 
+WORKDIR /var/task
+
+COPY src/ ./src
+COPY composer.json .
+COPY .env .
+COPY src/index.php .
+
+RUN composer install
 RUN /var/lang/bin/php -v
 
 CMD [ "index" ]
