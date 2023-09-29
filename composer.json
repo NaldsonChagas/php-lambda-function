@@ -11,5 +11,8 @@
             "name": "Naldson Chagas"
         }
     ],
-    "require": {}
+    "require": {
+        "aws/aws-sdk-php": "^3.33",
+        "vlucas/phpdotenv": "^5.5"
+    }
 }

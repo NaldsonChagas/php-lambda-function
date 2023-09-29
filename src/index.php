@@ -2,7 +2,17 @@
 
 require 'vendor/autoload.php';
 
-function index($input)
+use \Naldson\LambdaSaveFile\Utils\Response;
+use \Naldson\LambdaSaveFile\Services\FileUploaderService;
+use \Naldson\LambdaSaveFile\Clients\ProjectS3Client;
+use \Naldson\LambdaSaveFile\Configs\InitialConfigs;
+
+(new InitialConfigs())->config();
+
+function index($input): string
 {
-    return \Naldson\LambdaSaveFile\Utils\Response::apiResponse('hello world');
+    $uploaderClient = new ProjectS3Client();
+    (new FileUploaderService($uploaderClient))->uploadAndNotify($input['file']);
+
+    return Response::apiResponse('hello world');
 }

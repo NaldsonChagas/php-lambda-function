@@ -49,7 +49,7 @@ COPY --from=builder /var/lang /var/lang
 
 COPY php.ini /var/lang/lib/php.ini
 
-# Layer 2: Runtime Interface Client
+# Layer 2: Runtime Interface Clients
 # Prepare runtime files
 COPY runtime/bootstrap /var/runtime
 RUN chmod 0755 /var/runtime/bootstrap

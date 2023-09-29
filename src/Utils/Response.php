@@ -4,7 +4,7 @@ namespace Naldson\LambdaSaveFile\Utils;
 
 class Response
 {
-    public static function apiResponse($body, $statusCode = 200)
+    public static function apiResponse($body, $statusCode = 200): string
     {
         $headers = [
             'Content-Type' => 'application/json',
